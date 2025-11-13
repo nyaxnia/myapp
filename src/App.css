@@ -8,6 +8,7 @@
 body, html, #root {
   height: 100%;
   font-family: 'century gothic', century;
+  overflow: hidden;
 }
 
 .about-box {
@@ -64,7 +65,7 @@ body, html, #root {
 }
 
 .navbar a {
-  color: white;
+  color:inherit;
   text-decoration: none;
   margin: 0 2rem;
   font-weight: bold;
@@ -107,7 +108,27 @@ body, html, #root {
 }
 
 /* App content below navbar */
-.app {
+/* .app { */
+  /* display: flex;
+  flex-direction: column;
+  min-height: 100vh; */
+/* } */
+
+.app.light{
+  background-color: white;
+  /* filter: brightness(100%); */
+      /* background-image: url(''); */
+
+  color: black;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.app.dark{
+  background-color: #222;
+    /* filter: brightness(70%); */
+    /* background-image: url(''); */
+  color: white;
   display: flex;
   flex-direction: column;
   min-height: 100vh;

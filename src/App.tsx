@@ -9,7 +9,7 @@ import './App.css';
 const Navbar: React.FC = () => {
   const mode = useSelector((state: RootState) => state.theme.mode);
   const dispatch = useDispatch();
-
+  console.log("AppMode: ", mode);
   return (
     <nav className="navbar">
       <Link to="/">Home</Link>
