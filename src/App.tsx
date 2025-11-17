@@ -9,19 +9,16 @@ import './App.css';
 const Navbar: React.FC = () => {
   const mode = useSelector((state: RootState) => state.theme.mode);
   const dispatch = useDispatch();
-  console.log("AppMode: ", mode);
+
   return (
     <nav className="navbar">
       <Link to="/">Home</Link>
       <Link to="/about">About</Link>
       <Link to="/works">Works</Link>
       <Link to="/menu">Gallery</Link>
+      <Link to="/blog">Blog</Link>
       <Link to="/contact">Contact</Link>
-
-      <button
-        onClick={() => dispatch(toggleTheme())}
-        className="theme-toggle"
-      >
+      <button onClick={() => dispatch(toggleTheme())} className="theme-toggle">
         {mode === 'light' ? '🌙 Dark' : '☀️ Light'}
       </button>
     </nav>
@@ -69,13 +66,11 @@ const Works: React.FC = () => (
         <h3>Concentrix Office Design</h3>
         <p>Modern textures and warm tones for a cozy transformation.</p>
       </div>
-
       <div className="work-card">
         <img src="/warli 2.jpg" alt="Graphic design for concentrix" />
         <h3>Graphic Design for Concentrix</h3>
         <p>Understood the design requirements and executed the project.</p>
       </div>
-
       <div className="work-card">
         <img src="/cafe.jpg" alt="Smartworks Cafe" />
         <h3>Smartworks Cafe</h3>
@@ -100,11 +95,51 @@ const Menu: React.FC = () => (
   </div>
 );
 
+const Blog: React.FC = () => (
+  <div className="page blog-page-horizontal">
+    <h1>Blog</h1>
+    <p className="blog-intro">
+      Each image below reflects a unique facet of my journey — aesthetic, passion, and professionalism.
+    </p>
+
+    <div className="blog-horizontal-row">
+      <div className="blog-card">
+        <img src="/formal.jpeg" alt="Business photo" className="blog-image-portrait" />
+        <h2>Business click</h2>
+        <p><strong>Camera:</strong> iPhone 16 Pro | <strong>Focal:</strong> 3.4x</p>
+        <p>Raw portrait with natural lighting. Reflects my confident, composed identity as a designer.</p>
+      </div>
+
+      <div className="blog-card">
+        <img src="/EYE.jpeg" alt="Passion photo" className="blog-image-portrait" />
+        <h2>Passion</h2>
+        <p><strong>Camera:</strong> iPhone 16 Pro | <strong>Focal:</strong> 1x</p>
+        <p>Captured during live sketching. Art is my calm and passion — a space where I feel most myself.</p>
+      </div>
+
+      <div className="blog-card">
+        <img src="/CLOCK.jpeg" alt="Aesthetic photo clicked in Ireland" className="blog-image-portrait" />
+        <h2>Aesthetic click</h2>
+        <p><strong>Camera:</strong> iPhone 16 Pro | <strong>Focal:</strong> 1.6x</p>
+        <p>Ambient light, raw capture. I love spontaneous beauty — especially buildings — through my designer’s lens.</p>
+      </div>
+    </div>
+  </div>
+);
+
 const Contact: React.FC = () => (
   <div className="page">
     <h1>Contact Me</h1>
     <p>Email: shaniasunil17@gmail.com</p>
     <p>Phone: +353 0000000000</p>
+
+    <a
+      href="/RESUME 2025.pdf"
+      download
+      className="cv-button"
+    >
+      📄 Download My CV
+    </a>
   </div>
 );
 
@@ -122,6 +157,7 @@ const App: React.FC = () => {
             <Route path="/about" element={<About />} />
             <Route path="/works" element={<Works />} />
             <Route path="/menu" element={<Menu />} />
+            <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
           <Footer />
