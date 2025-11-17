@@ -35,7 +35,7 @@ const Footer: React.FC = () => (
 // ------------------ Pages ------------------
 const Home: React.FC = () => (
   <div className="page">
-    <img src="/profile picture.jpeg" alt="Shania Sunil" className="profile-pic" />
+    <img src="/myapp/profile picture.jpeg" alt="Shania Sunil" className="profile-pic" />
     <h1>Shania Sunil</h1>
     <h2>Interior Designer | UI/UX Designer</h2>
   </div>
