@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import type { RootState } from './redux/store';
 import { toggleTheme } from './redux/themeSlice';
@@ -35,7 +35,7 @@ const Footer: React.FC = () => (
 // ------------------ Pages ------------------
 const Home: React.FC = () => (
   <div className="page">
-    <img src="/myapp/profile picture.jpeg" alt="Shania Sunil" className="profile-pic" />
+    <img src="/profile_picture.jpeg" alt="Shania Sunil" className="profile-pic" />
     <h1>Shania Sunil</h1>
     <h2>Interior Designer | UI/UX Designer</h2>
   </div>
@@ -148,7 +148,7 @@ const App: React.FC = () => {
   const mode = useSelector((state: RootState) => state.theme.mode);
 
   return (
-    <Router>
+    <BrowserRouter basename="/myapp">
       <div className={`app ${mode}`}>
         <Navbar />
         <div className="content">
