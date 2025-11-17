@@ -1,9 +1,9 @@
 {
   "name": "my-app",
-  "homepage": "https://github.com/nyaxnia/portfolio.git",
+  "homepage": "https://github.com/nyaxnia/myapp.git",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nyaxnia/portfolio.git"
+    "url": "https://github.com/nyaxnia/myapp.git"
   },
   "private": true,
   "version": "0.0.0",
@@ -14,6 +14,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "postinstall": "npm run build",
+    "predeploy":"npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
