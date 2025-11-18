@@ -109,16 +109,23 @@ const Blog: React.FC = () => (
       <div className="blog-card">
         <img src={asset("formal.jpeg")} className="blog-image-portrait" alt="Business photo" />
         <h2>Business click</h2>
+         <p><strong>Camera:</strong> iPhone 16 Pro<br />
+         <strong>Focal Length:</strong> 3.4x — This telephoto lens captures crisp detail from a distance. It isolates the subject beautifully while maintaining a professional tone.</p>
+
       </div>
 
       <div className="blog-card">
         <img src={asset("EYE.jpeg")} className="blog-image-portrait" alt="Passion" />
         <h2>Passion</h2>
+         <p><strong>Camera:</strong> iPhone 16 Pro<br />
+         <strong>Focal Length:</strong> 1x — This standard lens captures the scene as seen by the human eye, perfect for documenting spontaneous, intimate moments with emotional depth.</p>
       </div>
 
       <div className="blog-card">
         <img src={asset("CLOCK.jpeg")} className="blog-image-portrait" alt="Aesthetic photo" />
         <h2>Aesthetic click</h2>
+         <p><strong>Camera:</strong> iPhone 16 Pro<br />
+         <strong>Focal Length:</strong> 1.6x — This mid-range lens balances depth and context, ideal for capturing architectural details and ambient scenes with clarity and warmth.</p>
       </div>
     </div>
   </div>
