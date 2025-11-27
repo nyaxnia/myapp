@@ -99,7 +99,7 @@ const Menu: React.FC = () => (
 );
 
 const Blog: React.FC = () => (
-  <div className="page blog-page-horizontal">
+  <div className="page blog-page-horizontal slide-in">
     <h1>Blog</h1>
     <p className="blog-intro">
       Each image below reflects a unique facet of my journey — aesthetic, passion, and professionalism.
@@ -109,25 +109,43 @@ const Blog: React.FC = () => (
       <div className="blog-card">
         <img src={asset("formal.jpeg")} className="blog-image-portrait" alt="Business photo" />
         <h2>Business click</h2>
-         <p><strong>Camera:</strong> iPhone 16 Pro<br />
-         <strong>Focal Length:</strong> 3.4x — This telephoto lens captures crisp detail from a distance. It isolates the subject beautifully while maintaining a professional tone.</p>
-
+        <p><strong>Camera:</strong> iPhone 16 Pro<br />
+        <strong>Focal Length:</strong> 3.4x — This telephoto lens captures crisp detail from a distance.</p>
       </div>
 
       <div className="blog-card">
         <img src={asset("EYE.jpeg")} className="blog-image-portrait" alt="Passion" />
         <h2>Passion</h2>
-         <p><strong>Camera:</strong> iPhone 16 Pro<br />
-         <strong>Focal Length:</strong> 1x — This standard lens captures the scene as seen by the human eye, perfect for documenting spontaneous, intimate moments with emotional depth.</p>
+        <p><strong>Camera:</strong> iPhone 16 Pro<br />
+        <strong>Focal Length:</strong> 1x — Perfect for documenting spontaneous, intimate moments.</p>
       </div>
 
       <div className="blog-card">
         <img src={asset("CLOCK.jpeg")} className="blog-image-portrait" alt="Aesthetic photo" />
         <h2>Aesthetic click</h2>
-         <p><strong>Camera:</strong> iPhone 16 Pro<br />
-         <strong>Focal Length:</strong> 1.6x — This mid-range lens balances depth and context, ideal for capturing architectural details and ambient scenes with clarity and warmth.</p>
+        <p><strong>Camera:</strong> iPhone 16 Pro<br />
+        <strong>Focal Length:</strong> 1.6x — Ideal for capturing architectural details.</p>
       </div>
     </div>
+
+    {/* Side arrow to video page */}
+    <Link to="/blog/video" className="side-arrow">➡ Watch Sunglasses Commercial</Link>
+  </div>
+);
+
+const BlogVideo: React.FC = () => (
+  <div className="page blog-video-page slide-in">
+    <h1>Sunglasses Commercial</h1>
+    <p>This video was created by me and my team members as part of a creative project.</p>
+
+    <div className="video-container">
+      <video controls className="sunglasses-video">
+        <source src={asset("sunglasses_commercial.mp4")} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <Link to="/blog" className="back-arrow">⬅ Back to Blog</Link>
   </div>
 );
 
@@ -162,6 +180,7 @@ const App: React.FC = () => {
             <Route path="/works" element={<Works />} />
             <Route path="/menu" element={<Menu />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/video" element={<BlogVideo />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
           <Footer />

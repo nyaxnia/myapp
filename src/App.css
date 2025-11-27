@@ -276,3 +276,65 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+/* ---------------- NEW BLOG VIDEO STYLES ---------------- */
+
+/* Side arrow link */
+.side-arrow {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #cc5500;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.side-arrow:hover {
+  transform: translateX(8px);
+}
+
+/* Back arrow */
+.back-arrow {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #cc5500;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.back-arrow:hover {
+  transform: translateX(-8px);
+}
+
+/* Video container */
+.video-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.sunglasses-video {
+  width: 80%;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Slide animation */
+.slide-in {
+  animation: slideIn 0.6s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
