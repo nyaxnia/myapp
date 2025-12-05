@@ -135,17 +135,54 @@ const Blog: React.FC = () => (
 
 const BlogVideo: React.FC = () => (
   <div className="page blog-video-page slide-in">
-    <h1>Sunglasses Commercial</h1>
-    <p>This video was created by me and my team members as part of a creative project.</p>
+    
+    {/* CRITICAL: This wrapper constrains all content for alignment and better layout management */}
+    <div className="video-content-wrapper">
+      <h1>Sunglasses Commercial</h1>
+      <p>This video was created by me and my team members as part of a creative project.</p>
 
-    <div className="video-container">
-      <video controls className="sunglasses-video">
-        <source src={asset("sunglasses_commercial.mp4")} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <div className="video-container">
+        <video controls className="sunglasses-video">
+          {/* Confirmed correct file path */}
+          <source src={asset("BEYOND THE LENS.MP4")} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      
+      <Link to="/blog" className="back-arrow">⬅ Back to Blog</Link>
+      
+      <div className="video-description">
+        <p>
+          "Beyond the Lens" is a story about a boy who feels bored and drained by his daily life and work. He tries calling a friend to lift his mood, but the friend doesn't answer. He decides to take a break and step outside. As he's leaving, he realizes he forgot his sunglasses. When he finally puts them on, the world looks colorful and lively. The glasses remind him of happy moments. They show how sometimes we need a different lens or perspective to appreciate life.
+        </p>
+
+        <p>
+          The video was shot on an iPhone 15 in 4K at 24fps, using cinematic mode. Most scenes of the actor are medium, eye-level shots. We used a top-view shot for the table objects and POV shots after he wears the glasses. For those POV moments, we filmed things around us that felt meaningful or aesthetically pleasing.
+        </p>
+
+        <p>
+          The desk scenes are mostly static because we wanted a clean, symmetrical look to match his routine and mood. After he puts on the glasses, the video shifts into a short montage meant to create a sense of happiness and nostalgia.
+        </p>
+
+        <p>
+          We edited and color-graded the video in VN. The lighting for the desk scenes was a mix of natural light and soft indoor light. The music we used is 'We Are the People' by Empire of the Sun. The volume stays low while he is indoors, and it becomes louder and more energetic when he wears the glasses to highlight the change in mood.
+        </p>
+        
+        <h3>Group Roles</h3>
+        <p>
+          Our group shared the work evenly. All four of us helped create the story, which was inspired by our own work lives and everyday experiences. Myself and Salvi worked on the editing. Gautam acted in the video. I picked the song, and the direction was handled by Sidhant and Gautam.
+        </p>
+        
+        <ul>
+          <li>Music: Shania</li>
+          <li>Actor: Gautam</li>
+          <li>Edits: Salvi & Shania</li>
+          <li>Direction: Sidhant & Gautam</li>
+          <li>Story: Everyone</li>
+          <li>Videography: Everyone</li>
+        </ul>
+      </div>
     </div>
-
-    <Link to="/blog" className="back-arrow">⬅ Back to Blog</Link>
   </div>
 );
 
